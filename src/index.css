@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ntn {
+  @apply text-neutral-grayishblue text-sm font-medium
+}
+
+.list-name {
+  @apply text-primary-vdarkblue text-sm font-medium hover:text-neutral-vdblackblue hover:font-bold
+}
+
+.dropdown {
+  @apply flex gap-2 items-center focus:outline-none border-none hover:underline
+}
+
+.dropdown-det {
+  @apply absolute bg-neutral-white shadow-md py-5 px-5 rounded-md mt-4 w-36 space-y-3
+}
+
+.btn:hover {
+  @apply bg-primary-vlightred  text-neutral-white border-primary-vlightred border-2 
+}
+
+.bttn:hover {
+  @apply text-primary-vlightred bg-neutral-white border-neutral-grayishblue 
+}
+
+.list-details {
+  @apply absolute appearance-none
+}
+
+.h {
+  @apply text-neutral-vdgrayishblue text-2xl font-bold
+}
+
+.p {
+  @apply text-neutral-grayishblue text-sm  font-medium mt-4 mb-12
+}
+
+.list {
+  @apply text-neutral-white text-base font-semibold mb-7
+}
+
+.list-det {
+  @apply text-neutral-grayishblue text-sm font-semibold flex flex-col space-y-2 
+}
+
+.menu-drop {
+  @apply text-gradient-vddesaturateblue flex gap-2 items-center focus:outline-none border-none hover:underline font-bold text-sm
+}
+
+.menu-dropdown {
+  @apply bg-neutral-grayishblue mt-4 space-y-3 py-5 px-20 rounded-md text-sm
+}
+
+.drop-name {
+  @apply text-neutral-vdgrayishblue text-sm font-bold text-sm
+}

@@ -330,12 +330,12 @@ export const Blogr = () => {
         </div>
       </main>
 
-      <footer className="bg-neutral-vdblackblue rounded-tr-3xl flex flex-col justify-center items-center md:flex-row space-y-12 md:ustify-between md:items-start px-32 py-14 mt-16">
+      <footer className="bg-neutral-vdblackblue rounded-tr-3xl flex flex-col justify-between items-start md:flex-row  md:justify-between md:items-start px-32 py-14 mt-16">
         <div>
           <img className="w-16" src={logo} alt="" />
         </div>
 
-        <div className="text-center">
+        <div className="">
           <h2 className="list">Product</h2>
           <nav>
             <ul className="list-det">

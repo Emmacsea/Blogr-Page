@@ -289,7 +289,7 @@ export const Blogr = () => {
 
         <div className="relative flex flex-col md:flex-row justify-between items-center md:gap-44 h-auto md:h-48 bg-main-desk bg-cover bg-gradient-vddesaturateblue md:px-32 px-12 md:pb-0 pb-16 mt-16 rounded-bl-3xl rounded-tr-3xl ">
           <div className="md:hidden block md:mb-0 mb-28">
-            <img className="absolute -top-16 left-56 h-40 md:h-auto" src={phone} alt="" />
+            <img className="absolute -top-16 left-52 h-40 md:h-auto" src={phone} alt="" />
           </div>
           <div className="hidden md:block">
             <img className="h-40 md:h-auto" src={phone} alt="" />

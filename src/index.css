@@ -31,11 +31,11 @@
 }
 
 .h {
-  @apply text-neutral-vdgrayishblue text-2xl font-bold
+  @apply text-neutral-vdgrayishblue text-2xl md:font-bold font-semibold
 }
 
 .p {
-  @apply text-neutral-grayishblue text-sm  font-medium mt-4 mb-12
+  @apply text-neutral-grayishblue md:text-sm text-base md:font-medium font-bold mt-4 mb-12
 }
 
 .list {
@@ -55,5 +55,5 @@
 }
 
 .drop-name {
-  @apply text-neutral-vdgrayishblue text-sm font-bold text-sm
+  @apply text-neutral-vdgrayishblue text-sm font-bold 
 }

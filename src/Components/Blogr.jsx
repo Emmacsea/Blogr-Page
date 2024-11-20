@@ -2,9 +2,11 @@ import { useState } from "react";
 import logo from "../assets/images/logo.svg";
 import arrowdwn from "../assets/images/icon-arrow-light.svg";
 import arrowup from "../assets/images/icon-arrow-dark.svg";
-import illustrate from "../assets/images/illustration-editor-desktop.svg";
+import illustratedesktop from "../assets/images/illustration-editor-desktop.svg";
+import illustratemobile from "../assets/images/illustration-editor-mobile.svg";
 import phone from "../assets/images/illustration-phones.svg";
-import laptop from "../assets/images/illustration-laptop-desktop.svg";
+import laptopdesktop from "../assets/images/illustration-laptop-desktop.svg";
+import laptopmobile from "../assets/images/illustration-laptop-mobile.svg";
 import menuicon from "../assets/images/icon-hamburger.svg";
 import menuclose from "../assets/images/icon-close.svg"
 
@@ -15,8 +17,8 @@ export const Blogr = () => {
   const [isMenuIcon, setMenuIcon] = useState(false);
   return (
     <div>
-      <header className="bg-header-desk bg-cover bg-center bg-primary-lightred py-8 px-32 rounded-bl-3xl">
-        <div className="flex justify-between items-center">
+      <header className="bg-header-desk bg-cover bg-center bg-primary-lightred py-8 md:px-32 px-8 rounded-bl-3xl">
+        <div className="relative flex justify-between items-center w-full">
           <div className="flex justify-between items-center space-x-6">
             <div>
               <img className="w-12 md:w-16" src={logo} alt="" />
@@ -110,10 +112,10 @@ export const Blogr = () => {
             </button>
 
           {isMenuIcon && (
-            <div className="absolute top-20 left-0 right-0 py-6 px-5 mx-32 bg-neutral-white rounded-md shadow-md z-10 flex flex-col justify-center items-center ">
+            <div className="absolute top-12 left-0 right-0 w-80  place-content-center py-6 px-5 bg-neutral-white rounded-md shadow-md z-10 flex flex-col justify-center items-center text-center">
               <div className="border-b-neutral-grayishblue border-b-2 w-full">
               <nav >
-              <ul className="space-y-5 text-center flex flex-col justify-center items-center pb-5">
+              <ul className="space-y-6 text-center flex flex-col justify-center items-center pb-5">
                 <li className="text-center">
                   <button className="menu-drop " onClick={() => setProductDropdown(!isProductDropdown)}>Product
                     <img src={isProductDropdown ? arrowup : arrowdwn} alt="" />
@@ -183,14 +185,14 @@ export const Blogr = () => {
             </nav>
               </div>
             <div className="flex flex-col justify-center items-center space-y-4 mt-5 text-center">
-            <div>
-              <button className="menu-drop" type="button">
+            <div className="">
+              <button className="text-gradient-vddesaturateblue text-sm mr-4 font-bold " type="button">
                 Login
               </button>
             </div>
             <div>
               <button
-                className="bg-primary-lightred text-sm text-neutral-white border-primary-vlightred border-2 rounded-full py-2 px-5"
+                className="flex justify-center items-center bg-primary-lightred text-sm text-neutral-white border-primary-vlightred border-2 rounded-full py-2 px-10"
                 type="button"
               >
                 Sign Up
@@ -249,12 +251,12 @@ export const Blogr = () => {
       </header>
 
       <main>
-        <div className="py-14 px-32">
-          <h2 className="text-neutral-vdgrayishblue text-3xl font-bold text-center mb-11">Designed for the future</h2>
+        <div className="py-14 md:px-32 px-2">
+          <h2 className="text-neutral-vdgrayishblue md:text-3xl text-2xl font-bold text-center mb-11">Designed for the future</h2>
 
           <div className="flex flex-col-reverse md:flex-row text-center md:text-start justify-between items-center gap-36  ">
             {/* section 1 */}
-            <div className="-mt-20 md:mt-7"> 
+            <div className="-mt-20 md:mt-7 md:px-0 px-8"> 
               <div>
                 <h4 className="h">Introducing an extensible editor</h4>
                 <p className="p">
@@ -276,22 +278,28 @@ export const Blogr = () => {
                 </p>
               </div>
             </div>
-            <div>
-              <img src={illustrate} alt="" />
+            <div className="md:block hidden">
+              <img src={illustratedesktop} alt="" />
+            </div>
+            <div className="md:hidden block">
+              <img src={illustratemobile} alt="" />
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center md:gap-44 h-72 md:h-48 bg-main-desk bg-cover bg-gradient-vddesaturateblue px-32 mt-16 rounded-bl-3xl rounded-tr-3xl ">
-          <div className="">
+        <div className="relative flex flex-col md:flex-row justify-between items-center md:gap-44 h-auto md:h-48 bg-main-desk bg-cover bg-gradient-vddesaturateblue md:px-32 px-12 md:pb-0 pb-16 mt-16 rounded-bl-3xl rounded-tr-3xl ">
+          <div className="md:hidden block md:mb-0 mb-28">
+            <img className="absolute -top-16 left-56 h-40 md:h-auto" src={phone} alt="" />
+          </div>
+          <div className="hidden md:block">
             <img className="h-40 md:h-auto" src={phone} alt="" />
           </div>
 
           <div className="text-center md:text-start">
-            <h2 className="text-neutral-white text-lg md:text-xl font-bold mb-4">
+            <h2 className="text-neutral-white md:text-xl text-2xl font-bold mb-4">
               State of the Art Infrastructure
             </h2>
-            <p className="text-neutral-grayishblue text-xs md:text-sm font-medium">
+            <p className="text-neutral-grayishblue text-sm font-medium">
               With reliability and speed in mind, worldwide data centers provide
               the backbone for ultra-fast connectivity. This ensures your site
               will load instantly, no matter where your readers are, keeping
@@ -300,12 +308,15 @@ export const Blogr = () => {
           </div>
         </div>
 
-        <div className="flex flex-col px-32 text-center md:px-0 md:text-start justify-center md:flex-row md:justify-between md:items-center gap-44 mt-24 md:pr-32">
-          <div>
-            <img src={laptop} alt="" />
+        <div className="flex flex-col text-center md:px-0 md:text-start justify-center md:flex-row md:justify-between md:items-center gap-44 mt-24 md:pr-32">
+          <div className="hidden md:block">
+            <img src={laptopdesktop} alt="" />
+          </div>
+          <div className="block md:hidden">
+            <img src={laptopmobile} alt="" />
           </div>
 
-          <div className="-mt-36 md:mt-3">
+          <div className="-mt-36 md:mt-3 md:px-0 px-7">
             <div>
               <h2 className="h">Free, open, simple</h2>
               <p className="p">
@@ -330,12 +341,12 @@ export const Blogr = () => {
         </div>
       </main>
 
-      <footer className="bg-neutral-vdblackblue rounded-tr-3xl flex flex-col justify-between items-start md:flex-row  md:justify-between md:items-start px-32 py-14 mt-16">
+      <footer className="bg-neutral-vdblackblue rounded-tr-3xl flex flex-col justify-center items-center md:flex-row  md:justify-between md:items-start px-32 py-14 mt-16 md:space-y-0 space-y-12">
         <div>
-          <img className="w-16" src={logo} alt="" />
+          <img className="md:w-16" src={logo} alt="" />
         </div>
 
-        <div className="">
+        <div className="text-center md:text-start">
           <h2 className="list">Product</h2>
           <nav>
             <ul className="list-det">
@@ -358,7 +369,7 @@ export const Blogr = () => {
           </nav>
         </div>
 
-        <div className="text-center">
+        <div className="text-center md:text-start">
           <h2 className="list">Company</h2>
           <nav>
             <ul className="list-det">
@@ -378,7 +389,7 @@ export const Blogr = () => {
           </nav>
         </div>
 
-        <div className="text-center">
+        <div className="text-center md:text-start">
           <h2 className="list">Connect</h2>
           <nav>
             <ul className="list-det">
